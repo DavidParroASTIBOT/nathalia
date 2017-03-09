@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "uno";
+  src: url('../fonts/seisc.ttf') format("truetype");
+}
+body{
+  background-image:  url("../img/patron.jpg");
+  font-family: uno;
+  text-transform: uppercase;
+}
+ul{margin:0;padding: 0;list-style: none;}
+.menu{
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+.menu>ul{
+  padding: 0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  position: fixed;
+  width: 100%;
+  vertical-align: center;
+}
+.menu>ul>li{display: flex;padding: 0 1em;align-items: center;}
+.menu>ul>li>a{
+  text-decoration: none;
+  color: grey;
+  width: 100%;
+  padding: 40% 0;
+  align-self: center;
+}
+.menu>a{
+  position: fixed;
+  right: 0;
+  padding: 3em 1em;
+  text-decoration: none;
+  color: grey;
+}
+.menu>a:hover,.menu>ul>li>a:hover{
+  color:black;
+  text-shadow: 0 0 10px rgba(252,19,208,0.5);
+}
+.menu>ul>li:last-child{
+  float:right;
+}
+.logo{
+  width: 13em;
+}
+#slider>img{
+  width: 60%;
+	margin-left:20%;
+	margin-top:150px;
+	max-height: 720px;
+	display: block;
+	box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+#cuerpo{
+  width: 60%;
+  margin: 0 auto;
+}
+h1{text-transform: uppercase;text-align: center;}
+.subir{
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  background:rgba(247,129,216,0.5);
+}
+.subir img{
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  transition: all .5s;
+  width: 100%;
+  height: 100%;
+}
+.subir:hover{
+  height: 4em;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  background: rgba(247,129,216,1);
+  transition: all .5s;
+}
+.portOpa{
+	border-radius: 100%;
+	width: 200px!important;
+	height: 200px!important;
+	min-height: 200px!important;
+	min-width: 200px!important;
+	margin: 0 auto;
+}
+.portOpa>img{
+	padding-top: 5ex;
+  width: 5em;
+  height: 5em;
+}
+.portOpa>p{
+	color:white;
+  text-transform: uppercase;
+}
+.portOpa{
+  position: relative;
+  background-color: rgba(0,0,0,0.7);
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  color:white;
+  opacity: 0;
+  text-align: center;
+  z-index: 9;
+}
+.portOpa{
+  margin-top: 1em;
+}
+.portOpa:hover{
+  opacity: 1;
+}
+.contPort{
+  display: flex;
+  flex-flow: row wrap;
+}
+.imgPort{
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  z-index: 1;
+}
+.imgSec{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  position: relative;
+  top:-54em;
+  overflow: hidden;
+}
+.imgSec>img{
+  margin-top:1em;
+}
+@media (min-width:667px) and (max-width:1333px){
+  .imgSec{
+    top:-27em;
+  }
+}
+@media (min-width:1334px){
+  .imgSec{
+    top:-13.5em;
+  }
+}
+.linea{
+  text-align:center;
+  margin-top:2em;
+}
+.linea p{
+  width: 60%;
+  height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(252,19,208,0.15);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.linea span{
+  height: 20px;
+  width: 100px;
+}
+.imgHere>img{width: 50%;float: left;padding: 1em;}
+@media (min-width:667px) and (max-width:1333px){
+  .imgHere>img{width: 100%;}
+}
+@font-face {
+	  font-family: "firma";
+	  src: url('../fonts/firma1.otf') format("truetype");
+	}
+#firma{
+	font-family: "firma";
+	font-size: 60px;
+	font-weight: normal;
+  text-align: right;
+  width: 100%;
+	}
+  div.gmap{margin-top: 2em;text-align: center;}
+  div.gmap>iframe{width: 50%;box-shadow: 0 0 20px rgba(0,0,0,0.9);}
+  .rrss>ul{display: flex;flex-flow: row wrap;justify-content: center;}
+  .formu{display: flex;}
+  .rrss>ul>li{padding: 0.5em 0.5em;}
+  #tw:hover,#fb:hover,#in:hover{box-shadow: 0 0 20px rgba(0,0,0,0.6);border-radius: 100%;}
+  div#portafolio{margin-bottom: -160px;}
+  @media (max-width:667px){
+    div#portafolio{margin-bottom: -760px;}
+  }
+  @media (min-width:666px) and (max-width:1333px){
+    div#portafolio{margin-bottom: -360px;}
+  }
+input,label{
+  font-family: uno;
+}
+input,textarea{
+  width: 100%;
+  border-radius: 5px;
+  border:1px solid rgb(247,129,216);
+}
+fieldset{border: 0;}
+.formContacto>form>button{
+  border-radius: 5px;
+  font-family: uno;
+  font-weight: bolder;
+  padding: 0.5ex;
+}
+.logo2{width: 50%;display: block;margin: 0 auto;}
+.formContacto>form>button:hover{
+  background-color: rgba(247,129,216,1);
+  color:white;
+}
+.rrss{margin-top: 1em;}
+h2{text-align: center;}
