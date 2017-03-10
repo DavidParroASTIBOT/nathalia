@@ -2,6 +2,10 @@
   font-family: "uno";
   src: url('../fonts/seisc.ttf') format("truetype");
 }
+@font-face {
+  font-family: "dos";
+  src: url('../fonts/DroidSans.ttf') format("truetype");
+}
 body{
   background-image:  url("../img/patron.jpg");
   font-family: uno;
@@ -57,7 +61,7 @@ ul{margin:0;padding: 0;list-style: none;}
 	display: block;
 	box-shadow: 0 0 20px rgba(0,0,0,0.6);
 }
-#cuerpo{
+.cuerpo{
   width: 60%;
   margin: 0 auto;
 }
@@ -191,9 +195,10 @@ h1{text-transform: uppercase;text-align: center;}
   width: 100%;
 	}
   div.gmap{margin-top: 2em;text-align: center;}
-  div.gmap>iframe{width: 50%;box-shadow: 0 0 20px rgba(0,0,0,0.9);}
+  div.gmap>iframe{width: 50%;box-shadow: 0 0 20px rgba(0,0,0,0.9);height: 50%;}
   .rrss>ul{display: flex;flex-flow: row wrap;justify-content: center;}
   .formu{display: flex;flex-flow:row wrap;}
+  .formu>.info,.formContacto{margin: 0 auto;}
   .rrss>ul>li{padding: 0.5em 0.5em;}
   #tw:hover,#fb:hover,#in:hover{box-shadow: 0 0 20px rgba(0,0,0,0.6);border-radius: 100%;}
   div#portafolio{margin-bottom: -160px;}
@@ -293,9 +298,18 @@ div.pad{
   width: 60%;
   margin: auto;
 }
-div.pad>p{
-  text-transform: capitalize;
+div.pad{
+  text-transform: none;
+  font-family: dos;
 }
 div.pad>h2,div.pad>p{
   text-align: left;
+}
+#sobremi{margin-top:-150px;}
+#sobremi>h1{padding-bottom: 1em;}
+@media (min-width:667px) and (max-width:1333px){
+  #sobremi{margin-top:-400px;}
+}
+@media (max-width:666px){
+  #sobremi{margin-top:-800px;}
 }

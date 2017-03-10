@@ -49,7 +49,7 @@
         </ul>
       </div>
     </header>
-    <div id="cuerpo">
+    <div class="cuerpo">
       <h1>BEBES</h1>
       <p>En NDC fotografía hacemos fotografía de premamá, recién nacido, bautizo y infantil,
         Creando así recuerdos imborrables de cada una de las etapas por las que pasan vuestros pequeños.
