@@ -179,10 +179,14 @@ h1{text-transform: uppercase;text-align: center;}
   height: 20px;
   width: 100px;
 }
-.imgHere>img{width: 50%;float: left;padding: 1em;}
-@media (min-width:667px) and (max-width:1333px){
-  .imgHere>img{width: 100%;}
+.imgHere>img{
+  box-shadow: 0 0 20px rgba(0,0,0,0.9);
 }
+.imgHere>img{width: 50%;float: left;margin: 1em;}
+@media (max-width:1333px){
+  .imgHere>img{width: 100%; }
+}
+
 @font-face {
 	  font-family: "firma";
 	  src: url('../fonts/firma1.otf') format("truetype");
