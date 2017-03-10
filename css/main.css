@@ -188,7 +188,7 @@ h1{text-transform: uppercase;text-align: center;}
   div.gmap{margin-top: 2em;text-align: center;}
   div.gmap>iframe{width: 50%;box-shadow: 0 0 20px rgba(0,0,0,0.9);}
   .rrss>ul{display: flex;flex-flow: row wrap;justify-content: center;}
-  .formu{display: flex;}
+  .formu{display: flex;flex-flow:row wrap;}
   .rrss>ul>li{padding: 0.5em 0.5em;}
   #tw:hover,#fb:hover,#in:hover{box-shadow: 0 0 20px rgba(0,0,0,0.6);border-radius: 100%;}
   div#portafolio{margin-bottom: -160px;}
