@@ -72,6 +72,7 @@ h1{text-transform: uppercase;text-align: center;}
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   background:rgba(247,129,216,0.5);
+  transition: all .5s;
 }
 .subir img{
   border-radius: 15px;
@@ -87,7 +88,6 @@ h1{text-transform: uppercase;text-align: center;}
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   background: rgba(247,129,216,1);
-  transition: all .5s;
 }
 .portOpa{
 	border-radius: 100%;
@@ -105,6 +105,9 @@ h1{text-transform: uppercase;text-align: center;}
 .portOpa>p{
 	color:white;
   text-transform: uppercase;
+  max-width: 180px;
+  margin:0 auto;
+  font-weight: bolder;
 }
 .portOpa{
   position: relative;
@@ -114,9 +117,10 @@ h1{text-transform: uppercase;text-align: center;}
   opacity: 0;
   text-align: center;
   z-index: 9;
+  margin-top: 1em
 }
-.portOpa{
-  margin-top: 1em;
+.contPort>a{
+  text-decoration: none;
 }
 .portOpa:hover{
   opacity: 1;
@@ -124,6 +128,7 @@ h1{text-transform: uppercase;text-align: center;}
 .contPort{
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
 }
 .imgPort{
   width: 200px;
@@ -215,8 +220,82 @@ fieldset{border: 0;}
 }
 .logo2{width: 50%;display: block;margin: 0 auto;}
 .formContacto>form>button:hover{
-  background-color: rgba(247,129,216,1);
-  color:white;
+  background-color: #F6CEF5;
+  color:black;
 }
 .rrss{margin-top: 1em;}
 h2{text-align: center;}
+footer{
+  margin-top:20px;
+}
+footer>p{
+  text-align: center;
+  font-size:14px;
+  margin-top: 40px;
+  color: #A4A4A4;
+}
+footer>p>a{
+  text-decoration: none;
+  text-transform: none;
+  color:#23527c;
+}
+footer>p>a:hover{
+  text-shadow: 0 0 10px rgba(252,19,208,0.5);
+}
+.cr{
+	width: 10px
+}
+header>div.flexslider{
+  width: 60%;
+  margin:auto;
+  margin-top: 1.5em;
+  box-shadow: 0 0 10px #000;
+}
+.menu2{
+  position: static;
+  top: 0;
+  z-index: 0;
+}
+.menu2>ul{
+  padding: 0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  vertical-align: center;
+}
+.menu2>ul>li{display: flex;padding: 0 1em;align-items: center;}
+.menu2>ul>li>a{
+  text-decoration: none;
+  color: grey;
+  width: 100%;
+  padding: 40% 0;
+  align-self: center;
+}
+.menu2>a{
+  position: absolute;
+  padding: 3em 1em;
+  text-decoration: none;
+  color: grey;
+  top: 0;
+  right: 0;
+}
+.menu2>a:hover,.menu2>ul>li>a:hover{
+  color:black;
+  text-shadow: 0 0 10px rgba(252,19,208,0.5);
+}
+.menu2>ul>li:last-child{
+  float:right;
+}
+div.pad{
+  width: 60%;
+  margin: auto;
+}
+div.pad>p{
+  text-transform: capitalize;
+}
+div.pad>h2,div.pad>p{
+  text-align: left;
+}
