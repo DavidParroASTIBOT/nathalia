@@ -6,6 +6,10 @@
   font-family: "dos";
   src: url('../fonts/DroidSans.ttf') format("truetype");
 }
+@font-face {
+  font-family: "tres";
+  src: url('../fonts/Raleway-Regular.ttf') format("truetype");
+}
 body{
   background-image:  url("../img/patron.jpg");
   font-family: uno;
@@ -213,7 +217,8 @@ h1{text-transform: uppercase;text-align: center;}
     div#portafolio{margin-bottom: -360px;}
   }
 input,label{
-  font-family: uno;
+  font-family: tres;
+  letter-spacing: 110%;
 }
 input,textarea{
   width: 100%;
@@ -221,14 +226,14 @@ input,textarea{
   border:1px solid rgb(247,129,216);
 }
 fieldset{border: 0;}
-.formContacto>form>button{
+.formContacto>form>button,.acceso>input[type='submit']{
   border-radius: 5px;
   font-family: uno;
   font-weight: bolder;
   padding: 0.5ex;
 }
 .logo2{width: 50%;display: block;margin: 0 auto;}
-.formContacto>form>button:hover{
+.formContacto>form>button:hover,.acceso>input[type='submit']:hover{
   background-color: #F6CEF5;
   color:black;
 }
@@ -345,6 +350,10 @@ div.pad>h2,div.pad>p{
   text-shadow: 0 0 10px rgba(252,19,208,0.5);
 }
 div.cuerpo2{width: 90%;margin:0 auto;}
-.portadas{display: flex;flex-flow: row wrap;}
-.portadas>a{text-decoration: none;text-align: center;margin: 1em;}
+.portadas{display: flex;flex-flow: row wrap;justify-content: center;}
+.portadas>a{text-decoration: none;text-align: center;margin: 1em;color:#424242}
+.portadas>a:hover{  color:black;text-shadow: 0 0 10px rgba(252,19,208,0.5);}
 .portadas>a>img{width: 250px;box-shadow:  0 0 20px rgb(0,0,0);}
+.acceso{width: 70%;margin:1em auto;}
+.acceso>input{margin:1em 0;}
+.acceso>input[type='submit']{width: 150px;height: 30px;margin: 0 auto;display: block;border-color:lightgrey;}

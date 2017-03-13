@@ -9,7 +9,7 @@
     }else{
       if(isset($_POST['enviar'])){
         if(comprobarUsuario($_POST['pass'])){
-          if($_SESSION['nombre']=="administrador"){
+          if($_SESSION['tipo']==1){
             header("Location: ../admin/index.php");
           }
           $form=false;
@@ -49,8 +49,8 @@
     </header>
     <div class="cuerpo2">
       <?php if($form){ ?>
-      <form action="#" method="post">
-        <label for="pass">Contraseña: </label><input type="text" name="pass" id="pass" />
+      <form class='acceso' action="#" method="post">
+        <label for="pass">Contraseña: </label><input type="password" name="pass" id="pass" />
         <input type="submit" name="enviar" value="Acceder">
       </form>
       <?php } else { ?>
@@ -65,7 +65,9 @@
               }
               echo "</div>";
             ?>
-          <?php  } ?>
+          <?php  } else { ?>
+            <h1>Aun no tienes álbumes</h1>
+          <?php }  ?>
       <?php } ?>
     </div>
     <footer>
