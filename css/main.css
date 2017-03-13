@@ -317,3 +317,34 @@ div.pad>h2,div.pad>p{
 @media (max-width:666px){
   #sobremi{margin-top:-800px;}
 }
+.menu3{
+  position: static;
+  top: 0;
+  z-index: 0;
+}
+.menu3>ul{
+  padding: 0;
+  margin:0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.8);
+  width: 100%;
+  vertical-align: center;
+}
+.menu3>ul>li{display: flex;padding: 0 1em;align-items: center;}
+.menu3>ul>li>a{
+  text-decoration: none;
+  color: grey;
+  width: 100%;
+  padding: 40% 0;
+  align-self: center;
+}
+.menu3>a:hover,.menu3>ul>li>a:hover{
+  color:black;
+  text-shadow: 0 0 10px rgba(252,19,208,0.5);
+}
+div.cuerpo2{width: 90%;margin:0 auto;}
+.portadas{display: flex;flex-flow: row wrap;}
+.portadas>a{text-decoration: none;text-align: center;margin: 1em;}
+.portadas>a>img{width: 250px;box-shadow:  0 0 20px rgb(0,0,0);}

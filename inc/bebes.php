@@ -17,29 +17,29 @@
     <header>
       <div class="menu2">
   			<ul>
-  				<li><a href="../index.html">INICIO</a></li>
-  				<li><a href="../index.html #secciones">SECCIONES</a></li>
-  				<li><a href="../index.html #blog">BLOG</a></li>
+  				<li><a href="../index.php">INICIO</a></li>
+  				<li><a href="../index.php #secciones">SECCIONES</a></li>
+  				<li><a href="../index.php #blog">BLOG</a></li>
   				<li><img class='logo' src="../img/logo2.png" alt="logo"></li>
-  				<li><a href="../index.html #sobremi">SOBRE MI</a></li>
-  				<li><a href="../index.html #gmap">UBICACIÓN</a></li>
-  				<li><a href="../index.html #contacto">CONTACTO</a></li>
+  				<li><a href="../index.php #sobremi">SOBRE MI</a></li>
+  				<li><a href="../index.php #gmap">UBICACIÓN</a></li>
+  				<li><a href="../index.php #contacto">CONTACTO</a></li>
   			</ul>
   			<a href="#acceso">ACCESO CLIENTES</a>
   		</div>
       <div class="flexslider">
         <ul class="slides">
-          <li data-thumb="../img/bautizos/Album1/16712744833_4d21865ed8_o.jpg">
-            <img src="../img/bautizos/Album1/16712744833_4d21865ed8_o.jpg" />
+          <li data-thumb="../img/bautizos/Album1/16712744833_4d21865ed8_o-min.jpg">
+            <img src="../img/bautizos/Album1/16712744833_4d21865ed8_o-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17081588350_41cb0de454_o.jpg">
-            <img src="../img/bautizos/Album1/17081588350_41cb0de454_o.jpg" />
+          <li data-thumb="../img/bautizos/Album1/17081588350_41cb0de454_o-min.jpg">
+            <img src="../img/bautizos/Album1/17081588350_41cb0de454_o-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17243178166_67d032b1a6_o.jpg">
-            <img src="../img/bautizos/Album1/17243178166_67d032b1a6_o.jpg" />
+          <li data-thumb="../img/bautizos/Album1/17243178166_67d032b1a6_o-min.jpg">
+            <img src="../img/bautizos/Album1/17243178166_67d032b1a6_o-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17267373382_a91acc9b8c_o.jpg">
-            <img src="../img/bautizos/Album1/17267373382_a91acc9b8c_o.jpg" />
+          <li data-thumb="../img/bautizos/Album1/17267373382_a91acc9b8c_o-min.jpg">
+            <img src="../img/bautizos/Album1/17267373382_a91acc9b8c_o-min.jpg" />
           </li>
 <!--
           <li data-thumb="../img/bautizos/Album1/17307028356_b18975571c_o.jpg">
