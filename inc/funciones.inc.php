@@ -51,10 +51,10 @@ function mostrarAlbumes($idUser){
 	$stmt->bind_param('s', $idUser);
 	$stmt->execute();
 	$stmt->store_result();
-	$stmt->bind_result($id,$nombre,$id_usuario,$tipo_album,$portada);
+	$stmt->bind_result($id,$nombre,$id_usuario,$tipo_album,$portada,$ubicacion);
 	$resultado = array();
 	while($stmt->fetch()){
-		$bindResults=array($id,$nombre,$id_usuario,$tipo_album,$portada);
+		$bindResults=array($id,$nombre,$id_usuario,$tipo_album,$portada,$ubicacion);
 		array_push($resultado,$bindResults);
 	}
 	return $resultado;

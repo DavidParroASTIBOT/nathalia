@@ -30,6 +30,7 @@
     <link rel="icon" href="../favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
     <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="./css/admin.css" type="text/css">
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
