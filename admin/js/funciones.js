@@ -28,25 +28,30 @@ $(document).ready(function(){
   });
 
   $("#albumAdd").click(function(){
-    $('.subirPortada').css("display","block");
     var nombreAlb=$("#nomAlb").val();
     var idUser=$('#nombreUsuario option:selected').val();
     var tipoAlb=$('#nombreAlbum option:selected').val()
     $.post("./inc/addAlbum.php","nombreAlb="+nombreAlb+"&idUser="+idUser+"&tipoAlb="+tipoAlb,function(consulta){
-      alert(consulta);
+      if(consulta==1){
+        alert("Álbum creado correctamente.");
+      }else{
+        alert("Problema al crear el álbum.");
+      }
+      window.location.href = "./index.php";
     });
   });
 
   $("#addAlbum").click(function(){
-    $('.newAlbum').css("display","block");
+    $('.newAlbum').css("display","flex");
   });
 
   $("#addImg").click(function(){
     $('#albumes').css("display","block");
+    $("#image-upload").css("display","block");
   });
 
   $("#albumes").change(function(){
-    $("#dropzone").css("display","block");
+    $("#image-upload").append('<input type="hidden" name="id_album" value="'+$("#albumes").val()+'" />');
   });
 
 });

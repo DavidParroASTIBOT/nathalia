@@ -125,7 +125,7 @@ h1{text-transform: uppercase;text-align: center;}
   opacity: 0;
   text-align: center;
   z-index: 9;
-  margin-top: 1em
+  margin-top: 1em;
 }
 .contPort>a{
   text-decoration: none;
@@ -353,7 +353,23 @@ div.cuerpo2{width: 90%;margin:0 auto;}
 .portadas{display: flex;flex-flow: row wrap;justify-content: center;}
 .portadas>a{text-decoration: none;text-align: center;margin: 1em;color:#424242}
 .portadas>a:hover{  color:black;text-shadow: 0 0 10px rgba(252,19,208,0.5);}
-.portadas>a>img{width: 250px;box-shadow:  0 0 20px rgb(0,0,0);}
+.portadas>a>img{width: 250px;height: 166px;box-shadow:  0 0 20px rgb(0,0,0);}
 .acceso{width: 70%;margin:1em auto;}
 .acceso>input{margin:1em 0;}
 .acceso>input[type='submit']{width: 150px;height: 30px;margin: 0 auto;display: block;border-color:lightgrey;}
+@media (max-width:1639px){
+  .portOpa,.imgPort{
+    margin:2em 2em;
+  }
+}
+@media(min-width:1640px){
+  .portOpa,.imgPort{
+    margin:2em 4em;
+    width: 250px!important;
+    height: 250px!important;
+  }
+  .portOpa{margin-top:0em;}
+  .imgSec{
+    top:-38.15em;
+  }
+}

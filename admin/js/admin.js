@@ -1,7 +1,7 @@
 $(document).ready(function(){
   Dropzone.autoDiscover = false;
   $("#dropzone").dropzone({
-    url: "./inc/uploads.php?album="+$('.albumOculto').val(),
+    url: "./inc/uploads.php?album="+$('#albumes').val(),
     addRemoveLinks: true,
     maxFileSize: 1000,
     dictResponseError: "Ha ocurrido un error en el server",
@@ -23,7 +23,7 @@ $(document).ready(function(){
       var name = file.name;
       $.ajax({
         type: "POST",
-        url: "./inc/uploads.php?delete=true&album="+$('.albumOculto').val()+"",
+        url: "./inc/uploads.php?delete=true&album="+$('#albumes').val()+"",
         data: "filename="+name,
         success: function(data)
         {

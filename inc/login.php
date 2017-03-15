@@ -4,8 +4,15 @@
 
     iniciarSesion();
     if(isset($_SESSION['id'])){
-
       $form=false;
+      if(comprobarUsuario($_SESSION['pass'])){
+        if($_SESSION['tipo']==1){
+          header("Location: ../admin/index.php");
+        }
+        $form=false;
+      }else{
+        $form=true;
+      }
     }else{
       if(isset($_POST['enviar'])){
         if(comprobarUsuario($_POST['pass'])){

@@ -55,11 +55,25 @@
               <p>Más</p>
             </div>
           </a>
+          <a href="./inc/otros.php">
+            <div class="portOpa">
+              <img src="./img/add-heart.png" alt="más">
+              <p>Más</p>
+            </div>
+          </a>
+          <a href="./inc/otros.php">
+            <div class="portOpa">
+              <img src="./img/add-heart.png" alt="más">
+              <p>Más</p>
+            </div>
+          </a>
         </div>
         <div class="imgSec">
           <img class='imgPort' alt='bebe' src='./img/bautizos/portada-seccion.jpg'>
           <img class='imgPort' alt='comunion' src='./img/comuniones/portada-seccion.jpg'>
           <img class='imgPort' alt='boda' src='./img/bodas/portada-seccion-min.jpg'>
+          <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
+          <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
           <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
         </div>
       </div>

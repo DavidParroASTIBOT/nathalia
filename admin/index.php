@@ -25,7 +25,10 @@
     <script src="./js/dropzone.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
     <title>Administración</title>
-    <script src="./js/admin.js"></script>
+    <!--<script src="./js/admin.js"></script>-->
+    <script src="http://demo.itsolutionstuff.com/plugin/jquery.js"></script>
+  	<link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.0.1/min/dropzone.min.css" rel="stylesheet">
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.2.0/min/dropzone.min.js"></script>
   </head>
   <body>
     <header>
@@ -56,8 +59,9 @@
       </div>
       <div class="gAlbumes">
         <h1>Gestión álbumes</h1>
-        <button id="addAlbum" type="button" name="button">Crear álbum</button>
-        <button id="addImg" type="button" name="button">Añadir imágenes</button>
+        <div class="botonesAlbum">
+          <button id="addAlbum" type="button" name="button">Crear álbum</button>
+        </div>
         <form class="newAlbum" action="#" method="post" enctype="multipart/form-data">
           <select id='nombreAlbum'>
             <option value="0">-Selecciona el tipo de álbum</option>
@@ -73,12 +77,26 @@
               }
             ?>
           </select>
-          <label  for="nomAlb">Nombre del nuevo álbum: </label><input type="text" id="nomAlb">
+          <label  for="nomAlb">Nombre del nuevo álbum: <input type="text" id="nomAlb"></label>
           <button type="button" id="albumAdd">Crear</button>
         </form>
+        <h2>Portadas de los álbumes</h2>
         <div class="subirPortada">
-          <label for="imgAlb">Portada del álbum:</label><input type="file" name="portada" id="imgAlb">
-          <button type="button" id="portadaAlb">Subir portada</button>
+          <form action="./inc/addPortada.php" method="post" enctype="multipart/form-data" id="subPortada">
+            <select id='album' name="album">
+              <option value="0">-Selecciona el álbum</option>
+              <?php
+              for($c=0;$c<sizeof($nombresAlbum);$c++){
+                  echo "<option value='".$nombresAlbum[$c]['id']."'>".$nombresAlbum[$c]['nombre']."</option>";
+                }
+              ?>
+            </select>
+            <label for="imgAlb">Portada del álbum: <input type="file" name="portada" id="imgAlb"></label>
+            <input type="submit" value="Subir portada">
+          </form>
+        </div>
+        <div class="botonesAlbum">
+          <button id="addImg" type="button" name="button">Añadir imágenes</button>
         </div>
         <select id='albumes'>
           <option value="0">-Selecciona el álbum</option>
@@ -87,7 +105,10 @@
             }
           ?>
         </select>
-        <div id="dropzone" class="dropzone"></div>
+        <!--<div id="dropzone" class="dropzone"></div>--->
+        <form action="./inc/upload.php" enctype="multipart/form-data" class="dropzone" id="image-upload">
+
+  			</form>
         </div>
       </div>
     </div>
@@ -95,4 +116,12 @@
       <p><img class='cr' src='../img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='../inc/cookies.html'>Política de cookies</a> - <a href='../inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
   </body>
+
+  <script type="text/javascript">
+  	Dropzone.options.imageUpload = {
+          maxFilesize:10,
+          acceptedFiles: ".jpeg,.jpg,.png,.gif"
+      };
+  </script>
+
 </html>

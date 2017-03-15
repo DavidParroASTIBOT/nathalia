@@ -3,8 +3,7 @@ require_once("./funciones.inc.php");
 if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
 {
 
-	if(isset($_GET["delete"]) && $_GET["delete"] == true)
-	{
+	if(isset($_GET["delete"]) && $_GET["delete"] == true){
 		$file = $_REQUEST['filename'];
 		if(file_exists('../uploads/'.$_REQUEST['album'].'/'.$file))
 		{
@@ -16,9 +15,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 		{
 			echo json_encode(array("res" => false));
 		}
-	}
-	else
-	{
+	}else{
 		$file = $_FILES["file"]["name"];
 		if(!is_dir("../uploads/".$_REQUEST['album']."/"))
 			mkdir("../uploads/".$_REQUEST['album']."/", 0777);

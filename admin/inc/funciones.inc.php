@@ -11,18 +11,25 @@ mysqli_set_charset($db_con, "utf8");
 		echo "Fallo al conectar a MySQL: (" . $db_con->connect_errno . ") " . $db_con->connect_error;
 	}
 
-function borrarImagen($album,$name){
-  GLOBAL $db_con;
-  $sql="delete from imagen where nombre='".$name."' and id_album='".$album."'";
-  //echo $sql;
-  $res = mysqli_query($db_con, $sql) or die(mysqli_error($db_con).$sql);
-}
 function addImagen($album,$name){
-  GLOBAL $db_con;
-  $sql="insert into imagen(id,id_album,nombre) VALUES(NULL,'".$name."','".$album."')";
-  //echo $sql;
-  $res = mysqli_query($db_con, $sql) or die(mysqli_error($db_con).$sql);
+	GLOBAL $db_con;
+	$sql="insert into foto(id_album,nombre) VALUES('".$album."','".$name."')";
+	//echo $sql;
+	if(mysqli_query($db_con, $sql)){
+		return true;
+	}else{
+		return false;
+	}
 }
+
+function borrarImagen($album,$name){
+	GLOBAL $db_con;
+	$sql="delete from imagenes where imagen_name='".$name."' and album_id='".$album."'";
+	//echo $sql;
+	$res = mysqli_query($db_con, $sql) or die(mysqli_error($db_con).$sql);
+}
+
+
 function getTiposAlbum(){
   GLOBAL $db_con;
   $sql="SELECT `id`,`descripcion` FROM `tipo_album-seccion`;";
@@ -52,5 +59,25 @@ function getNomAlbum(){
     $fm[]=$f;
   }
   return $fm;
+}
+function getNombreAlbum($id){
+  GLOBAL $db_con;
+  $sql="SELECT `nombre` FROM `album` WHERE `id`=".$id.";";
+  $res = mysqli_query($db_con, $sql) or die(mysqli_error($db_con).$sql);
+  $fm=array();
+  while($f= mysqli_fetch_assoc($res)){
+    $fm[]=$f;
+  }
+  return $fm;
+}
+function insertarPortada($id,$data){
+	GLOBAL $db_con;
+	$sql="UPDATE `album` SET `portada` = '".$db_con->real_escape_string($data)."' WHERE `album`.`id` ='".$id."'";
+	if($db_con->query($sql)){
+		return true;
+	}else{
+		return false;
+	}
+
 }
 ?>
