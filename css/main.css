@@ -151,19 +151,10 @@ h1{text-transform: uppercase;text-align: center;}
   position: relative;
   top:-54em;
   overflow: hidden;
+  padding-top: 2em;
 }
 .imgSec>img{
   margin-top:1em;
-}
-@media (min-width:667px) and (max-width:1333px){
-  .imgSec{
-    top:-27em;
-  }
-}
-@media (min-width:1334px){
-  .imgSec{
-    top:-13.5em;
-  }
 }
 .linea{
   text-align:center;
@@ -314,7 +305,7 @@ div.pad{
 div.pad>h2,div.pad>p{
   text-align: left;
 }
-#sobremi{margin-top:-150px;}
+#sobremi{margin-top:-34em;}
 #sobremi>h1{padding-bottom: 1em;}
 @media (min-width:667px) and (max-width:1333px){
   #sobremi{margin-top:-400px;}
@@ -357,19 +348,58 @@ div.cuerpo2{width: 90%;margin:0 auto;}
 .acceso{width: 70%;margin:1em auto;}
 .acceso>input{margin:1em 0;}
 .acceso>input[type='submit']{width: 150px;height: 30px;margin: 0 auto;display: block;border-color:lightgrey;}
-@media (max-width:1639px){
+@media (max-width:985px){
+  #sobremi{
+    margin-top: -80em;
+  }
+  .imgSec{
+    top:-83em;
+  }
   .portOpa,.imgPort{
-    margin:2em 2em;
+    margin:0 3em;
+  }
+  .contPort>a{
+    margin-top: 1em;
   }
 }
-@media(min-width:1640px){
+@media (min-width:986px) and (max-width:1479px){
   .portOpa,.imgPort{
-    margin:2em 4em;
+    margin:0 3em;
+  }
+  .imgSec{
+    top:-42.5em;
+  }
+  #sobremi{
+    margin-top: -39em;
+  }
+  .contPort>a{
+    margin-top: 1em;
+  }
+}
+@media (min-width:1480px) and (max-width:1889px){
+  .portOpa,.imgPort{
+    margin:0 3em;
+  }
+  .imgSec{
+    top:-29em;
+  }
+  #sobremi{
+    margin-top: -27em;
+  }
+  .contPort>a{
+    margin-top: 1em;
+  }
+}
+@media (min-width:1890px){
+  .portOpa,.imgPort{
+    margin:0 4em;
     width: 250px!important;
     height: 250px!important;
   }
-  .portOpa{margin-top:0em;}
   .imgSec{
-    top:-38.15em;
+    top:-35.15em;
+  }
+  .contPort>a{
+    margin-top: 1em;
   }
 }

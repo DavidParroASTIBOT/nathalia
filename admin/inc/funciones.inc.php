@@ -14,7 +14,6 @@ mysqli_set_charset($db_con, "utf8");
 function addImagen($album,$name){
 	GLOBAL $db_con;
 	$sql="insert into foto(id_album,nombre) VALUES('".$album."','".$name."')";
-	//echo $sql;
 	if(mysqli_query($db_con, $sql)){
 		return true;
 	}else{
@@ -25,7 +24,6 @@ function addImagen($album,$name){
 function borrarImagen($album,$name){
 	GLOBAL $db_con;
 	$sql="delete from imagenes where imagen_name='".$name."' and album_id='".$album."'";
-	//echo $sql;
 	$res = mysqli_query($db_con, $sql) or die(mysqli_error($db_con).$sql);
 }
 
