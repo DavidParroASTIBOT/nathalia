@@ -61,6 +61,7 @@
         <h1>Gestión álbumes</h1>
         <div class="botonesAlbum">
           <button id="addAlbum" type="button" name="button">Crear álbum</button>
+          <button id="delAlbum" type="button" name="button">Borrar álbum</button>
         </div>
         <form class="newAlbum" action="#" method="post" enctype="multipart/form-data">
           <select id='nombreAlbum'>
@@ -79,6 +80,16 @@
           </select>
           <label  for="nomAlb">Nombre del nuevo álbum: <input type="text" id="nomAlb"></label>
           <button type="button" id="albumAdd">Crear</button>
+        </form>
+        <form class="delAlbum" action="#" method="post">
+          <select id='album2' name="album2">
+            <option value="0">-Selecciona el álbum</option>
+            <?php
+            for($c=0;$c<sizeof($nombresAlbum);$c++){
+                echo "<option value='".$nombresAlbum[$c]['id']."'>".$nombresAlbum[$c]['nombre']."</option>";
+              }
+            ?>
+          </select>
         </form>
         <h2>Portadas de los álbumes</h2>
         <div class="subirPortada">
@@ -119,7 +130,7 @@
 
   <script type="text/javascript">
   	Dropzone.options.imageUpload = {
-          maxFilesize:10,
+          maxFilesize:50,
           acceptedFiles: ".jpeg,.jpg,.png,.gif"
       };
   </script>

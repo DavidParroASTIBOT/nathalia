@@ -1,4 +1,7 @@
 <?php
+require_once('../clases/Conexion.php');
+$instancia = Conexion::dameInstancia();
+$c=$instancia->dameConexion();
 function iniciarSesion(){
 	session_cache_limiter();
     session_name('ndc');
@@ -12,8 +15,7 @@ function crearNombreIdSesion() {
 }
 
 function comprobarUsuario($pass){
-	$instancia = Conexion::dameInstancia();
-	$c=$instancia->dameConexion();
+	GLOBAL $c;
 	$stmt=$c->prepare("SELECT id,nombre,pass,tipo FROM `usuario` WHERE pass=?");
 	$stmt->bind_param('s', $pass);
 	$stmt->execute();
@@ -32,8 +34,7 @@ function comprobarUsuario($pass){
 	//return true;
 }
 function comprobarAlbum($usuario){
-	$instancia = Conexion::dameInstancia();
-	$c=$instancia->dameConexion();
+	GLOBAL $c;
 	$stmt=$c->prepare("SELECT * FROM `album` WHERE id_usuario=?");
 	$stmt->bind_param('s', $usuario);
 	$stmt->execute();
@@ -45,8 +46,7 @@ function comprobarAlbum($usuario){
 	}
 }
 function mostrarAlbumes($idUser){
-	$instancia = Conexion::dameInstancia();
-	$c=$instancia->dameConexion();
+	GLOBAL $c;
 	$stmt=$c->prepare("SELECT * FROM `album` WHERE id_usuario=?");
 	$stmt->bind_param('s', $idUser);
 	$stmt->execute();
@@ -60,6 +60,7 @@ function mostrarAlbumes($idUser){
 	return $resultado;
 }
 function usuario($id){
+	global $c;
 	$stmt=$c->prepare("SELECT * FROM `usuario` WHERE pass=?");
 	$stmt->bind_param('s', $pass);
 	$stmt->execute();
@@ -99,38 +100,14 @@ function generaPass(){
 	}
 	return $pass;
 }
-function mandarPass($correo,$pass){
-	$mensaje="Ha solicitado cambiar su contraseña.\r".
-	"El sistema le ha asignado una contraseña aleatoria, por favor cambiela nada más acceda a su cuenta de nuevo.\n".
-	"La contraseña que le ha asignado el sistema es: ".$pass."\n".
-	"\n\nUn saludo de la administración de Heroe del Teclado";
-	$mensaje=wordwrap($mensaje,70,"\r\n");
-	/*return mail($correo,'Heroe del Teclado--Recuperacion Contraseña',$mensaje);*/
-		$mail = new PHPMailer();
-
-		//$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-		$mail->isSMTP();                                      // Set mailer to use SMTP
-		$mail->Host = 'smtp.gmail.com';  											// Specify main and backup SMTP servers
-		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = "heroetecladodaw@gmail.com";        // SMTP username
-		$mail->Password = "galileo2017";                      // SMTP password
-		$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
-		$mail->Port = 465;                                    // TCP port to connect to
-
-		$mail->setFrom("heroetecladodaw@gmail.com", 'Heroe del Teclado');
-		$mail->addAddress($correo);               // Name is optional
-
-
-		$mail->Subject = 'Heroe del Teclado--Recuperar contraseña';
-		$mail->Body    = $mensaje;
-		$mail->AltBody = $mensaje;
-
-		if(!$mail->send()) {
-		    return $mail->ErrorInfo;
-		} else {
-		    return 1;
-		}
-
+function mostrarFotos($idAlbum){
+	GLOBAL $c;
+	$sql="SELECT `nombre` FROM `foto` WHERE `id_album`=".$idAlbum.";";
+  $res = mysqli_query($c, $sql) or die(mysqli_error($c).$sql);
+  $fm=array();
+  while($f= mysqli_fetch_assoc($res)){
+    $fm[]=$f;
+  }
+  return $fm;
 }
 ?>

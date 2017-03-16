@@ -201,12 +201,7 @@ h1{text-transform: uppercase;text-align: center;}
   .rrss>ul>li{padding: 0.5em 0.5em;}
   #tw:hover,#fb:hover,#in:hover{box-shadow: 0 0 20px rgba(0,0,0,0.6);border-radius: 100%;}
   div#portafolio{margin-bottom: -160px;}
-  @media (max-width:667px){
-    div#portafolio{margin-bottom: -760px;}
-  }
-  @media (min-width:666px) and (max-width:1333px){
-    div#portafolio{margin-bottom: -360px;}
-  }
+
 input,label{
   font-family: tres;
   letter-spacing: 110%;
@@ -307,12 +302,6 @@ div.pad>h2,div.pad>p{
 }
 #sobremi{margin-top:-34em;}
 #sobremi>h1{padding-bottom: 1em;}
-@media (min-width:667px) and (max-width:1333px){
-  #sobremi{margin-top:-400px;}
-}
-@media (max-width:666px){
-  #sobremi{margin-top:-800px;}
-}
 .menu3{
   position: static;
   top: 0;
@@ -348,7 +337,7 @@ div.cuerpo2{width: 90%;margin:0 auto;}
 .acceso{width: 70%;margin:1em auto;}
 .acceso>input{margin:1em 0;}
 .acceso>input[type='submit']{width: 150px;height: 30px;margin: 0 auto;display: block;border-color:lightgrey;}
-@media (max-width:985px){
+@media (max-width:879px){
   #sobremi{
     margin-top: -80em;
   }
@@ -356,21 +345,35 @@ div.cuerpo2{width: 90%;margin:0 auto;}
     top:-83em;
   }
   .portOpa,.imgPort{
-    margin:0 3em;
+    margin:0 2em;
   }
   .contPort>a{
     margin-top: 1em;
   }
 }
-@media (min-width:986px) and (max-width:1479px){
-  .portOpa,.imgPort{
-    margin:0 3em;
+@media (min-width:880px) and (max-width:1319px){
+  #sobremi{
+    margin-top: -42em;
   }
   .imgSec{
     top:-42.5em;
   }
+  .portOpa,.imgPort{
+    margin:0 2em;
+  }
+  .contPort>a{
+    margin-top: 1em;
+  }
+}
+@media (min-width:1320px) and (max-width:1479px){
+  .portOpa,.imgPort{
+    margin:0 2em;
+  }
+  .imgSec{
+    top:-29em;
+  }
   #sobremi{
-    margin-top: -39em;
+    margin-top: -29em;
   }
   .contPort>a{
     margin-top: 1em;

@@ -6,7 +6,7 @@
   if(!empty($_FILES)){
      echo "subida";
      $tmpFile = $_FILES['file']['tmp_name'];
-     $filename = $uploadDir.'/'.time().'-'. $_FILES['file']['name'];
+     $filename = $uploadDir.'/'. $_FILES['file']['name'];
      if(move_uploaded_file($tmpFile,$filename)){
        if(addImagen($_REQUEST['id_album'],$_FILES['file']['name'])){
          echo "Metido en la BBDD";

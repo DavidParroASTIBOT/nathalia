@@ -12,7 +12,7 @@ button:hover{
 }
 .botonesCen{text-align: center;padding-top: 1em;}
 .newAlbum{display: flex;flex-flow: row wrap;}
-.newAlbum,#albumes,#dropzone{display: none;}
+.delAlbum,.newAlbum,#albumes,#dropzone{display: none;}
 #gUsers{display: flex;justify-content: space-between;flex-flow: row wrap;}
 #gUsers>div{flex:1;min-width: 150px;padding: 0 1em;}
 .botonesAlbum{margin:0 auto;display: block;display: flex;justify-content: center;flex-flow: row wrap;}
@@ -26,3 +26,4 @@ select{border-radius: 10px;text-align: center;}
 #albumes{margin: 1em auto;}
 #imgAlb{border:none;}
 #image-upload{display: none;}
+.delAlbum{justify-content: center;}

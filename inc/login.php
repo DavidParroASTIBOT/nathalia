@@ -64,12 +64,15 @@
       <?php } else { ?>
         <h1>Bienvenid@: <?php echo $_SESSION['nombre']; ?></h1>
           <?php if(comprobarAlbum($_SESSION['id'])){ ?>
-          <h2>Esto son lo álbumes que tienes:</h2>
+          <p>Ante todo, gracias por confiar en nosotros y contratar nuestros servicios.A continuación, podrá ver todas las fotos de su reportaje:</p>
             <?php
               $albumes=mostrarAlbumes($_SESSION['id']);
+              $ubicacion=$albumes[0][5];
+              $idAlbum=$albumes[0][0];
+              $fotos=mostrarFotos($idAlbum);
               echo "<div class='portadas'>";
-              for($i=0;$i<sizeof($albumes);$i++){
-                echo '<a href="verFoto.php?id='.$albumes[$i][0].'"><p>'.$albumes[$i][1].'</p><img src="verFoto.php?id='.$albumes[$i][0].'" alt="Portada"></a>';
+              for($i=0;$i<sizeof($fotos);$i++){
+                echo '<img src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['nombre'].'">';
               }
               echo "</div>";
             ?>

@@ -43,6 +43,7 @@ $(document).ready(function(){
 
   $("#addAlbum").click(function(){
     $('.newAlbum').css("display","flex");
+    $(".delAlbum").css("display","none");
   });
 
   $("#addImg").click(function(){
@@ -52,6 +53,26 @@ $(document).ready(function(){
 
   $("#albumes").change(function(){
     $("#image-upload").append('<input type="hidden" name="id_album" value="'+$("#albumes").val()+'" />');
+  });
+
+  $("#delAlbum").click(function(){
+      $(".newAlbum").css("display","none");
+      $(".delAlbum").css("display","flex");
+  });
+
+  $("#album2").change(function(){
+      if(confirm("Desea borrar el album:"+$("#album2 option:selected").text())){
+        var idAlbum=$("#album2").val();
+        var nomAlb=$("#album2 option:selected").text();
+        $.post("./inc/delFotos.php","idAlb="+idAlbum+"&nomAlb="+nomAlb,function(consulta){
+          if(consulta){
+            alert("Fotos del album borradas correctamente.");
+          }else{
+            alert("Problema al borrar las fotos.");
+          }
+          window.location.href = "./index.php";
+        });
+      }
   });
 
 });
