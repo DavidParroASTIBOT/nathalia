@@ -1,7 +1,7 @@
 <?php
-
-    $conexion  = mysqli_connect('localhost','root','','nathalia');
-    mysqli_set_charset ($conexion, "utf8" );
+  require_once('../../clases/Conexion.php');
+  $instancia = Conexion::dameInstancia();
+  $conexion=$instancia->dameConexion();
     $misql="SELECT `nombre` from `foto` WHERE `id_album`=".$_REQUEST['idAlb'].";";
     $res = mysqli_query($conexion, $misql) or die(mysqli_error($conexion).$misql);
     $fm=array();

@@ -69,7 +69,8 @@ ul{margin:0;padding: 0;list-style: none;}
   width: 60%;
   margin: 0 auto;
 }
-h1{text-transform: uppercase;text-align: center;}
+h1{text-transform: uppercase;text-align: center;font-size: 3rem;}
+h2{font-size: 2rem;}
 .subir{
   position: fixed;
   bottom: 2em;
@@ -406,3 +407,5 @@ div.cuerpo2{width: 90%;margin:0 auto;}
     margin-top: 1em;
   }
 }
+.portadas{display: flex;flex-flow: row wrap;}
+.material-placeholder{width: 20%;margin:1em 2.5%;}

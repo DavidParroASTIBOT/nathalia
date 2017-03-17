@@ -36,11 +36,13 @@
     <meta charset="utf-8">
     <link rel="icon" href="../favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <link rel="stylesheet" href="./css/admin.css" type="text/css">
     <script src="../js/jquery-3.1.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
+    <script type="text/javascript" src="../js/materialize.js"></script>
     <title>Acceso</title>
   </head>
   <body>
@@ -72,7 +74,7 @@
               $fotos=mostrarFotos($idAlbum);
               echo "<div class='portadas'>";
               for($i=0;$i<sizeof($fotos);$i++){
-                echo '<img src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['nombre'].'">';
+                echo '<img class="materialboxed responsive-img galeria" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['nombre'].'">';
               }
               echo "</div>";
             ?>
@@ -84,5 +86,10 @@
     <footer>
       <p><img class='cr' src='../img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='../inc/cookies.html'>Política de cookies</a> - <a href='../inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
+    <script type="text/javascript">
+    $(document).ready(function(){
+     $('.materialboxed').materialbox();
+    });
+    </script>
   </body>
 </html>

@@ -1,11 +1,13 @@
 <?php
     require_once("../inc/funciones.inc.php");
     require_once("./inc/funciones.inc.php");
-    require_once("../clases/Conexion.php");
+    require_once('../clases/Conexion.php');
 
     iniciarSesion();
     crearNombreIdSesion();
-
+    if($_SESSION['tipo']!=1){
+      header("Location: ../inc/login.php");
+    }
     $tiposAlbum=getTiposAlbum();
     $usuarios=getUsuarios();
     $nombresAlbum=getNomAlbum();
@@ -16,6 +18,8 @@
     <meta charset="utf-8">
     <link rel="icon" href="../favicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/normalize.css" type="text/css">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="./css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
     <link rel="stylesheet" href="./css/admin.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="./dropzone/downloads/css/dropzone.css">
@@ -91,8 +95,8 @@
             ?>
           </select>
         </form>
-        <h2>Portadas de los álbumes</h2>
         <div class="subirPortada">
+          <h2>Portadas de los álbumes</h2>
           <form action="./inc/addPortada.php" method="post" enctype="multipart/form-data" id="subPortada">
             <select id='album' name="album">
               <option value="0">-Selecciona el álbum</option>
@@ -127,7 +131,7 @@
       <p><img class='cr' src='../img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='../inc/cookies.html'>Política de cookies</a> - <a href='../inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
   </body>
-
+  <script type="text/javascript" src="./js/materialize.min.js"></script>
   <script type="text/javascript">
   	Dropzone.options.imageUpload = {
           maxFilesize:50,
