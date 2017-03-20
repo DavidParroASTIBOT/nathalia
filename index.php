@@ -8,12 +8,13 @@
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/slider.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
+
     <title>Fotografía Nathalia Dias</title>
   </head>
   <body>
     <header>
       <div class="menu">
-        <ul>
+        <ul id="menu">
           <li><a href="#">INICIO</a></li>
           <li><a href="#secciones">SECCIONES</a></li>
           <li><a href="#blog">BLOG</a></li>
@@ -24,6 +25,15 @@
         </ul>
         <a href="./inc/login.php">ACCESO CLIENTES</a>
       </div>
+      <button type="button" name="menumobile" id="bmobile"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      <ul id="mmobile">
+        <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>INICIO</a></li>
+        <li><a href="#secciones"><i class="fa fa-th" aria-hidden="true"></i>SECCIONES</a></li>
+        <li><a href="#blog"><i class="fa fa-picture-o" aria-hidden="true"></i>BLOG</a></li>
+        <li><a href="#sobremi"><i class="fa fa-user-circle-o" aria-hidden="true"></i>SOBRE MI</a></li>
+        <li><a href="#gmap"><i class="fa fa-map-marker" aria-hidden="true"></i>UBICACIÓN</a></li>
+        <li><a href="#contacto"><i class="fa fa-phone" aria-hidden="true"></i>CONTACTO</a></li>
+      </ul>
       <div id="slider"></div>
     </header>
     <div class="cuerpo">
@@ -46,19 +56,19 @@
           <a href="./inc/bodas.php">
             <div class="portOpa">
               <img src="./img/bodas.png" alt="bodas">
-              <p>Preboda y Bodas</p>
+              <p>Preboda, Bodas y postboda</p>
             </div>
           </a>
-          <a href="./inc/otros.php">
+          <a href="./inc/premama.php">
             <div class="portOpa">
               <img src="./img/add-heart.png" alt="más">
-              <p>Más</p>
+              <p>Premamá</p>
             </div>
           </a>
-          <a href="./inc/otros.php">
+          <a href="./inc/familia.php">
             <div class="portOpa">
               <img src="./img/add-heart.png" alt="más">
-              <p>Más</p>
+              <p>Familia</p>
             </div>
           </a>
           <a href="./inc/otros.php">
@@ -126,6 +136,7 @@
                 <br>
 
               </div>
+
           </div>
           <div class="formContacto">
             <form action='sendEmail.php' >
@@ -146,7 +157,6 @@
           </div>
         </div>
         <div class="rrss">
-          <h2>Sígueme</h2>
           <ul>
             <li><a href='http://www.facebook.com'><img id="fb" src="./img/face2.png" alt=""></a></li>
             <li><a href='http://www.twitter.com'><img id="tw" src="./img/twitter2.png" alt=""></a></li>
@@ -160,5 +170,12 @@
       <p><img class='cr' src='img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='./inc/cookies.html'>Política de cookies</a> - <a href='./inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
     <a href='#' class='subir'><img src="img/flecha.png" alt="flecha"></a>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#bmobile").click(function(){
+          $("#mmobile").toggleClass("mostrar");
+        });
+      });
+    </script>
   </body>
 </html>

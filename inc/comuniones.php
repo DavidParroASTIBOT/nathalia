@@ -30,9 +30,7 @@
 	</header>
 			<div class="cuerpo">
 			<h1>COMUNIONES</h1>
-			<p>En
-				 NDC fotografía
-				 hacemos
+			<p>Hacemos
 				 fotografía de primera comunión
 				con un estilo natural en
 				exteriores

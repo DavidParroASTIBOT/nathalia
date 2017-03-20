@@ -43,6 +43,7 @@
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
     <script type="text/javascript" src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/freewall.js"></script>
     <title>Acceso</title>
   </head>
   <body>
@@ -72,10 +73,11 @@
               $ubicacion=$albumes[0][5];
               $idAlbum=$albumes[0][0];
               $fotos=mostrarFotos($idAlbum);
-              echo "<div class='portadas'>";
+              echo "<div id='freewall' class='portada'>";
               for($i=0;$i<sizeof($fotos);$i++){
                 echo '<img class="materialboxed responsive-img galeria" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['nombre'].'">';
               }
+              echo "<p></p>";
               echo "</div>";
             ?>
           <?php  } else { ?>
@@ -89,6 +91,37 @@
     <script type="text/javascript">
     $(document).ready(function(){
      $('.materialboxed').materialbox();
+     /*var wall=new Freewall(".portadas");
+     wall.fitWidth();*/
+     //$("materialboxed").parent().css("height",$("materialboxed").height;
+
+			/*var temp = "<div class='brick' style='width:{width}px;'><img src='i/photo/{index}.jpg' width='100%'></div>";
+			var w = 1, h = 1, html = '', limitItem = 49;
+			for (var i = 0; i < limitItem; ++i) {
+				w = 1 + 3 * Math.random() << 0;
+				html += temp.replace(/\{width\}/g, w*150).replace("{index}", i + 1);
+			}
+			$("#freewall").html(html);*/
+      $("material-placeholder").css("height",$("material-placeholder>img").height);
+
+			var wall = new Freewall("#freewall");
+			wall.reset({
+				selector: '.galeria',
+				animate: true,
+				cellW: 150,
+				cellH: 'auto',
+				onResize: function() {
+					wall.fitWidth();
+				}
+			});
+
+			var images = wall.container.find('.portada');
+			images.find('img').load(function() {
+				wall.fitWidth();
+			});
+
+      window.resizeTo($(window).width(),$(window).height());
+
     });
     </script>
   </body>

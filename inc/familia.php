@@ -50,19 +50,16 @@
       </div>
     </header>
     <div class="cuerpo">
-      <h1>BEBES</h1>
-      <p>Hacemos fotografía de recién nacido, bautizo e infantil,
-        Creando así recuerdos imborrables de cada una de las etapas por las que pasan vuestros pequeños.
-        Siempre hacemos que la sesión sea divertida por encima de todas las cosas.
-        Estas sesiones se realizan en una mañana o en una tarde, y suelen durar entre dos y tres horas,
-        sobre todo trabajando con niños no debemos tener prisas si queremos buenos resultados.
-        Normalmente las realizo en Aldeamayor de San Martin dentro de un entorno privilegiado,
-        aunque también es posible en vuestras propia casa. En sesión de recién nacido siempre es en
-        la casa del bebe para no casarle de su entorno, y es preferible realizarlas en los primeros 15 días,
-        Estas sesiones las realizo con luz natural o luz continua.
-        Y el ambiente tiene que ser cálido. Es decir la temperatura ideal está entre unos 24-26 grados.
-        El bebé no puede pasar frío y si es necesario hacer la sesión en tirantes en pleno invierno se hace.
-        Consulte nuestras tarifas de los reportajes de premamá, recién nacido, bautizo y infantil.
+      <h1>Familia</h1>
+      <p>La fotografía de familia es sin lugar a dudas esa gran olvidada, si os fijáis os daréis cuenta de que nunca tenemos
+          buenas fotos en las que estemos todos los miembros de la familia juntos y salgamos guapos.
+          Sólo en los eventos nos paramos un rato y
+          compartimos protagonismo con esos primos que hace tanto que no veíamos o con la abuelita.
+        </br></br>
+          Os invitamos a hacer una sección de fotos en familia, que juntos disfrutemos de una buen rato
+          en familia, con risas, juegos,
+          abrazos y toda la ternura que esteis dispuestos a compartir con nosotros.
+          Sin prisas y con una fotógrafa que os ayudará a que todo el proceso sea una experiencia fluida y placentera.
       </p>
     </div>
     <footer>

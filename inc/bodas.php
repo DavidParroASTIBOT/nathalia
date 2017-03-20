@@ -42,7 +42,7 @@
 			</header>
 			<div class="cuerpo">
 			<h1>BODAS</h1>
-			<p>En NDC fotografía hacemos fotografía de parejas, Pre boda, boda y post boda.
+			<p>Hacemos fotografía de parejas, preboda, boda y postboda.
 				Además nosotros nos  reunimos con vosotros y os preguntamos qué cosas os gustan y cuales odiáis, de
 				forma que el día de la boda todo vaya fluido.
 				Nuestro estilo es el de fotorreportaje (La fotógrafa no es la protagonista ni crea la acción sino
