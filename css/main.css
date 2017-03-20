@@ -428,4 +428,5 @@ div.cuerpo2{width: 90%;margin:0 auto;}
 }
 
 .material-placeholder{margin:0.5em;width: 300px;}
-.portada{width: 65%;margin: auto;}
+.portada{width: 60%;margin: auto;display: flex;flex-flow: row wrap;}
+.portada>.material-placeholder{align-self: center}
