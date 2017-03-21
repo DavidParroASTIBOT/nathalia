@@ -102,7 +102,7 @@ function generaPass(){
 }
 function mostrarFotos($idAlbum){
 	GLOBAL $c;
-	$sql="SELECT `nombre` FROM `foto` WHERE `id_album`=".$idAlbum.";";
+	$sql="SELECT `nombre`,`id` FROM `foto` WHERE `id_album`=".$idAlbum.";";
   $res = mysqli_query($c, $sql) or die(mysqli_error($c).$sql);
   $fm=array();
   while($f= mysqli_fetch_assoc($res)){

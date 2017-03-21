@@ -1050,7 +1050,8 @@ if (jQuery) {
 
 
       origin.on('click', function(){
-        var placeholder = origin.parent('.material-placeholder');
+        location.href="../inc/verFoto.php?foto="+$(this).attr("id");
+        /*var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;
         var originalWidth = origin.width();
@@ -1171,8 +1172,10 @@ if (jQuery) {
                 {
                   height: newHeight,
                   width: newWidth,
-                  left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-                  top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
+                  /*left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
+                  top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2*/
+                  /*left:0,
+                  top:0
                 },
                 {
                   duration: inDuration,
@@ -1191,8 +1194,10 @@ if (jQuery) {
             {
               height: newHeight,
               width: newWidth,
-              left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
-              top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2
+              /*left: $(document).scrollLeft() + windowWidth/2 - origin.parent('.material-placeholder').offset().left - newWidth/2,
+              top: $(document).scrollTop() + windowHeight/2 - origin.parent('.material-placeholder').offset().top - newHeight/ 2*/
+              /*left:0,
+              top:0
             },
             {
               duration: inDuration,
@@ -1200,8 +1205,8 @@ if (jQuery) {
               easing: 'easeOutQuad',
               complete: function(){doneAnimating = true;}
             }
-            ); // End Velocity
-        }
+          ); // End Velocity
+        }*/
 
       }); // End origin on click
 
@@ -1209,7 +1214,7 @@ if (jQuery) {
       // Return on scroll
       $(window).scroll(function() {
         if (overlayActive) {
-          returnToOriginal();
+          //returnToOriginal();
         }
       });
 
@@ -1292,7 +1297,7 @@ if (jQuery) {
             origin.removeClass('active');
             doneAnimating = true;
             $(this).remove();
-
+            wall.fitWidth();
             // Remove overflow overrides on ancestors
             if (ancestorsChanged) {
               ancestorsChanged.css('overflow', '');

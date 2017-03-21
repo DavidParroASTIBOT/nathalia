@@ -39,11 +39,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="./css/admin.css" type="text/css">
+    <!--<link rel="stylesheet" href="./css/admin.css" type="text/css">--->
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
     <script type="text/javascript" src="../js/materialize.js"></script>
     <script type="text/javascript" src="../js/freewall.js"></script>
+    <script src="../js/jquery.lazyload.min.js"></script>
     <title>Acceso</title>
   </head>
   <body>
@@ -75,7 +76,7 @@
               $fotos=mostrarFotos($idAlbum);
               echo "<div id='freewall' class='portada'>";
               for($i=0;$i<sizeof($fotos);$i++){
-                echo '<img class="materialboxed responsive-img galeria" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['nombre'].'">';
+                echo '<img id="'.$ubicacion.$fotos[$i]['nombre'].'" class="materialboxed responsive-img galeria lazy" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['id'].'">';
               }
               echo "<p></p>";
               echo "</div>";
@@ -89,13 +90,15 @@
       <p><img class='cr' src='../img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='../inc/cookies.html'>Política de cookies</a> - <a href='../inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
     <script type="text/javascript">
+    var wall = new Freewall("#freewall");
     $(document).ready(function(){
-     $('.materialboxed').materialbox();
+      $("img.lazy").lazyload();
+      $('.materialboxed').materialbox();
       $("material-placeholder").css("height",$("material-placeholder>img").height);
 
-			var wall = new Freewall("#freewall");
+
 			wall.reset({
-				selector: '.galeria',
+				selector: '.material-placeholder',
 				animate: true,
 				cellW: 150,
 				cellH: 'auto',
@@ -103,13 +106,8 @@
 					wall.fitWidth();
 				}
 			});
+      wall.fitWidth();
 
-			var images = wall.container.find('.portada');
-			images.find('img').load(function() {
-				wall.fitWidth();
-			});
-
-      window.resizeTo($(window).width(),$(window).height());
 
     });
     </script>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/main.css" type="text/css">
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/anclas.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
 
     <title>Fotografía Nathalia Dias</title>
@@ -15,12 +16,12 @@
     <header>
       <div class="menu">
         <ul id="menu">
-          <li><a href="#">INICIO</a></li>
+          <li><a href="#slider">INICIO</a></li>
           <li><a href="#secciones">SECCIONES</a></li>
           <li><a href="#blog">BLOG</a></li>
           <li><img class='logo' src="./img/logo2.png" alt="logo"></li>
-          <li><a href="#sobremi">SOBRE MI</a></li>
-          <li><a href="#gmap">UBICACIÓN</a></li>
+          <li><a href="#anclaSobremi">SOBRE MI</a></li>
+          <li><a href="#anclaUbicacion">UBICACIÓN</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
         </ul>
         <a href="./inc/login.php">ACCESO CLIENTES</a>
@@ -49,25 +50,25 @@
           </a>
           <a href="./inc/comuniones.php">
             <div class="portOpa">
-              <img src="./img/angel.png" alt="comuniones">
-              <p>Comuniones</p>
+              <img src="./img/angel2.png" alt="comuniones">
+              <p>Comuniones e infantil</p>
             </div>
           </a>
           <a href="./inc/bodas.php">
             <div class="portOpa">
-              <img src="./img/bodas.png" alt="bodas">
+              <img src="./img/photos.png" alt="bodas">
               <p>Preboda, Bodas y postboda</p>
             </div>
           </a>
           <a href="./inc/premama.php">
             <div class="portOpa">
-              <img src="./img/add-heart.png" alt="más">
+              <img src="./img/pregnant.png" alt="más">
               <p>Premamá</p>
             </div>
           </a>
           <a href="./inc/familia.php">
             <div class="portOpa">
-              <img src="./img/add-heart.png" alt="más">
+              <img src="./img/family.png" alt="más">
               <p>Familia</p>
             </div>
           </a>
@@ -89,7 +90,7 @@
       </div>
       <div id="sobremi">
         <div class="linea"><p><span></span></p></div>
-        <h1>Sobre Mi</h1>
+        <h1 id="anclaSobremi">Sobre Mi</h1>
         <div class="imgHere">
           <img src="./img/slide_7-min.jpg" alt="">
           <p>
@@ -113,17 +114,7 @@
         </div>
       </div>
       <div class="linea"><p><span></span></p></div>
-      <div id="gmap" class="gmap">
-        <div>
-          <h1>Ubicación</h1>
 
-        </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973577.5475676614!2d-6.609159370391216!3d41.41244726324494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd47728c08c66e93%3A0xb3ff92d41ca26bef!2sValladolid!5e0!3m2!1ses!2ses!4v1489050544683" width="800" height="600" frameborder="0" style="border:0" allowfullscreen>
-          <div>
-          </div>
-        </iframe>
-        <div class="linea"><p><span></span></p></div>
-      </div>
       <div class='contacto' id='contacto'>
         <h1>CONTACTO</h1>
         <img class='logo2' alt="Logo" src="./img/logo2.png">
@@ -162,6 +153,16 @@
             <li><a href='http://www.twitter.com'><img id="tw" src="./img/twitter2.png" alt=""></a></li>
             <li><a href='http://www.linkedin.com'><img id="in" src="./img/link2.png" alt=""></a></li>
           </ul>
+        </div>
+        <div id="gmap" class="gmap">
+          <div>
+            <h5 id="anclaUbicacion">Ubicación</h5>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973577.5475676614!2d-6.609159370391216!3d41.41244726324494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd47728c08c66e93%3A0xb3ff92d41ca26bef!2sValladolid!5e0!3m2!1ses!2ses!4v1489050544683" width="800" height="600" frameborder="0" style="border:0" allowfullscreen>
+            <div>
+            </div>
+          </iframe>
+          <!--<div class="linea"><p><span></span></p></div>-->
         </div>
         <div class="linea"><p><span></span></p></div>
       </div>
