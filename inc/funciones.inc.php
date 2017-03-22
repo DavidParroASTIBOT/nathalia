@@ -13,6 +13,53 @@ function crearNombreIdSesion() {
 	$si=session_id();
 	$_SESSION['nombreId'] = $sn."=". $si;
 }
+function ubicacionAlbum($id){
+	GLOBAL $c;
+	$sql="SELECT `ubicacion` FROM `album` WHERE `id`=".$id.";";
+  $res = mysqli_query($c, $sql) or die(mysqli_error($c).$sql);
+  /*$fm=array();
+  while($f= mysqli_fetch_assoc($res)){
+    $fm[]=$f;
+  }*/
+	$fm= mysqli_fetch_assoc($res);
+  return $fm;
+}
+function nombreAlbum($id){
+	GLOBAL $c;
+	$sql="SELECT `nombre` FROM `album` WHERE `id`=".$id.";";
+  $res = mysqli_query($c, $sql) or die(mysqli_error($c).$sql);
+  /*$fm=array();
+  while($f= mysqli_fetch_assoc($res)){
+    $fm[]=$f;
+  }*/
+	$fm= mysqli_fetch_assoc($res);
+  return $fm;
+}
+function idUser($nombre){
+	GLOBAL $c;
+	$sql="SELECT `id` FROM `usuario` WHERE `nombre`='".$nombre."';";
+	$res = mysqli_query($c, $sql) or die(mysqli_error($c).$sql);
+	/*$fm=array();
+	while($f= mysqli_fetch_assoc($res)){
+		$fm[]=$f;
+	}*/
+	$fm=mysqli_fetch_assoc($res);
+	return $fm;
+}
+function esSeleccionada($id){
+	GLOBAL $c;
+	$stmt=$c->prepare("SELECT `seleccionada` FROM `foto` WHERE id=?");
+	$stmt->bind_param('i', $id);
+	$stmt->execute();
+	$stmt->store_result();
+	$stmt->bind_result($seleccionada);
+	$stmt->fetch();
+	if($seleccionada==1){
+		return 1;
+	}	else {
+		return 0;
+	}
+}
 
 function comprobarUsuario($pass){
 	GLOBAL $c;
@@ -57,6 +104,7 @@ function mostrarAlbumes($idUser){
 		$bindResults=array($id,$nombre,$id_usuario,$tipo_album,$portada,$ubicacion);
 		array_push($resultado,$bindResults);
 	}
+	//print_r($resultado);
 	return $resultado;
 }
 function usuario($id){

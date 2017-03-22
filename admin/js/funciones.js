@@ -49,6 +49,7 @@ $(document).ready(function(){
   $("#addImg").click(function(){
     $('#albumes').css("display","block");
     $("#image-upload").css("display","block");
+    $(".subirPortada").css("display","none");
   });
 
   $("#albumes").change(function(){
@@ -75,4 +76,9 @@ $(document).ready(function(){
       }
   });
 
+  $("#addPor").click(function(){
+    $('#albumes').css("display","none");
+    $("#image-upload").css("display","none");
+    $(".subirPortada").css("display","flex");
+  });
 });

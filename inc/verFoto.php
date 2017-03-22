@@ -1,6 +1,7 @@
 <?php
 	require("../clases/Conexion.php");
 	require("./funciones.inc.php");
+	iniciarSesion();
 	//header("Content-type: image/gif");
 	/*$instancia = Conexion::dameInstancia();
 	$c=$instancia->dameConexion();
@@ -9,7 +10,9 @@
 	while($fila=$r->fetch_assoc()){
 		echo $fila['portada'];
 	}*/
-	echo '<img src=".'.$_GET['foto'].'" alt="cargando..." style="height:100%;width:auto;margin:auto;display:block;box-shadow:0 0 20px rgb(0,0,0);">';
+	//echo "<br>Sel: ".esSeleccionada($_GET['id']);
+	echo '<img id="'.$_GET['id'].'" src=".'.$_GET['foto'].'" alt="cargando..." style="height:90%;width:auto;margin:2.5% auto;display:block;box-shadow:0 0 20px rgb(0,0,0);">';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,19 +29,33 @@
 			body{background-image: url("../img/patron.jpg");}
 			label{position: absolute;top: 0;left: 0;font-family: cuerpo;}
 		</style>
-		<script type="text/javascript">
-		$(document).ready(function(){
-			$("#sel").on('click', function(){
-				if($("#sel").is(':checked')){
-					alert("Seleccionada");
-				}else{
-					alert("Deseleccionada");
-				}
-			});
-		});
-		</script>
 	</head>
 	<body>
-		<?php echo '<label for="sel">Seleccionar foto:<input id="sel" type="checkbox" name="seleccionar" value="si"/></label>'; ?>
+		<?php
+		if(esSeleccionada($_GET['id'])){
+			echo '<label for="sel">Seleccionar foto:<input id="sel" type="checkbox" name="seleccionar" value="si" checked/></label>';
+		}else{
+			echo '<label for="sel">Seleccionar foto:<input id="sel" type="checkbox" name="seleccionar" value="si"/></label>';
+		}
+
+		?>
 	</body>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#sel").on('click', function(){
+			var idFoto=$("img").attr("id");
+			if($("#sel").is(':checked')){
+				console.log("Seleccionada: "+idFoto);
+				$.post("./updateSelected.php","idFoto="+idFoto+"&valor=1",function(consulta){
+					console.log(consulta);
+				});
+			}else{
+				console.log("Deseleccionada: "+idFoto);
+				$.post("./updateSelected.php","idFoto="+idFoto+"&valor=0",function(consulta){
+					console.log(consulta);
+				});
+			}
+		});
+	});
+	</script>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="volver">
   <head>
     <meta charset="utf-8">
     <link rel="icon" href="./favicon.png" type="image/png" />
@@ -18,11 +18,11 @@
         <ul id="menu">
           <li><a href="#slider">INICIO</a></li>
           <li><a href="#secciones">SECCIONES</a></li>
-          <li><a href="#blog">BLOG</a></li>
+          <li><a href="./inc/blog.php">BLOG</a></li>
           <li><img class='logo' src="./img/logo2.png" alt="logo"></li>
           <li><a href="#anclaSobremi">SOBRE MI</a></li>
-          <li><a href="#anclaUbicacion">UBICACIÓN</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
+          <li><a href="#anclaUbicacion">UBICACIÓN</a></li>
         </ul>
         <a href="./inc/login.php">ACCESO CLIENTES</a>
       </div>
@@ -92,7 +92,7 @@
         <div class="linea"><p><span></span></p></div>
         <h1 id="anclaSobremi">Sobre Mi</h1>
         <div class="imgHere">
-          <img src="./img/slide_7-min.jpg" alt="">
+          <img src="./img/retrato.jpg" alt="">
           <p>
           Desde muy niña he sido una apasionada de la fotografía. Sin duda alguna el amor mueve al
           mundo y es lo que me empuja a levantarme cada día. Amo esta Profesión. Para mí la fotografía
@@ -156,7 +156,8 @@
         </div>
         <div id="gmap" class="gmap">
           <div>
-            <h5 id="anclaUbicacion">Ubicación</h5>
+            <div class="linea"><p><span></span></p></div>
+            <h1 id="anclaUbicacion">Ubicación</h1>
           </div>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973577.5475676614!2d-6.609159370391216!3d41.41244726324494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd47728c08c66e93%3A0xb3ff92d41ca26bef!2sValladolid!5e0!3m2!1ses!2ses!4v1489050544683" width="800" height="600" frameborder="0" style="border:0" allowfullscreen>
             <div>

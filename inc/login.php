@@ -39,7 +39,6 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <!--<link rel="stylesheet" href="./css/admin.css" type="text/css">--->
     <script src="../js/jquery-3.1.1.min.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
     <script type="text/javascript" src="../js/materialize.js"></script>
@@ -76,7 +75,12 @@
               $fotos=mostrarFotos($idAlbum);
               echo "<div id='freewall' class='portada'>";
               for($i=0;$i<sizeof($fotos);$i++){
-                echo '<img id="'.$ubicacion.$fotos[$i]['nombre'].'" class="materialboxed responsive-img galeria lazy" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['id'].'">';
+                if(esSeleccionada($fotos[$i]['id'])==1){
+                  echo '<img id="'.$ubicacion.$fotos[$i]['nombre'].'" class="materialboxed responsive-img galeria lazy seleccionada" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['id'].'">';
+                }else{
+                  echo '<img id="'.$ubicacion.$fotos[$i]['nombre'].'" class="materialboxed responsive-img galeria lazy" src="'.".".$ubicacion.$fotos[$i]['nombre'].'" alt="'.$fotos[$i]['id'].'">';
+                }
+
               }
               echo "<p></p>";
               echo "</div>";

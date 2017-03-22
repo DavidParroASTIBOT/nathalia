@@ -1050,7 +1050,7 @@ if (jQuery) {
 
 
       origin.on('click', function(){
-        location.href="../inc/verFoto.php?foto="+$(this).attr("id");
+        location.href="../inc/verFoto.php?foto="+$(this).attr("id")+"&id="+$(this).attr("alt");
         /*var placeholder = origin.parent('.material-placeholder');
         var windowWidth = window.innerWidth;
         var windowHeight = window.innerHeight;

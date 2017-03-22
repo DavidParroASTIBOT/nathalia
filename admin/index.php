@@ -95,8 +95,18 @@
             ?>
           </select>
         </form>
+        <div class="botonesAlbum">
+          <button id="addPor" type="button" name="button">Añadir portada</button>
+          <button id="addImg" type="button" name="button">Añadir imágenes</button>
+        </div>
+        <select id='albumes'>
+          <option value="0">-Selecciona el álbum</option>
+          <?php for($c=0;$c<sizeof($nombresAlbum);$c++){
+              echo "<option value='".$nombresAlbum[$c]['id']."'>".$nombresAlbum[$c]['nombre']."</option>";
+            }
+          ?>
+        </select>
         <div class="subirPortada">
-          <h2>Portadas de los álbumes</h2>
           <form action="./inc/addPortada.php" method="post" enctype="multipart/form-data" id="subPortada">
             <select id='album' name="album">
               <option value="0">-Selecciona el álbum</option>
@@ -110,17 +120,6 @@
             <input type="submit" value="Subir portada">
           </form>
         </div>
-        <div class="botonesAlbum">
-          <button id="addImg" type="button" name="button">Añadir imágenes</button>
-        </div>
-        <select id='albumes'>
-          <option value="0">-Selecciona el álbum</option>
-          <?php for($c=0;$c<sizeof($nombresAlbum);$c++){
-              echo "<option value='".$nombresAlbum[$c]['id']."'>".$nombresAlbum[$c]['nombre']."</option>";
-            }
-          ?>
-        </select>
-        <!--<div id="dropzone" class="dropzone"></div>--->
         <form action="./inc/upload.php" enctype="multipart/form-data" class="dropzone" id="image-upload">
 
   			</form>
