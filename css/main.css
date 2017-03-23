@@ -421,6 +421,7 @@ i{margin-right: 1ex;}
   }
 }
 @media (min-width:1351px) and (max-width:1479px){
+  .cuerpoalbum{margin-top: 200px;}
   #slider>img{
     width: 55%;
     margin-left: auto;
@@ -442,7 +443,7 @@ i{margin-right: 1ex;}
   }
 }
 @media (min-width:1480px) and (max-width:1889px){
-
+  div.cuerpoalbum{margin-top: 200px!important;}
   .portOpa,.imgPort{
     margin:0 3em;
   }
@@ -457,6 +458,7 @@ i{margin-right: 1ex;}
   }
 }
 @media (min-width:1890px){
+  div.cuerpoalbum{margin-top: 200px!important;}
   .portOpa,.imgPort{
     margin:0 4em;
     width: 250px!important;
@@ -477,8 +479,8 @@ i{margin-right: 1ex;}
 div.cuerpoalbum{margin-top: 110px;}
 .contenidoBodas,.contenidoPremama{display: flex;flex-flow: row wrap;justify-content: space-between;}
 .contenidoBodas>img{margin: 0.5ex 0;height: 100%;width: 100%;}
-.contenidoBodas>img:nth-of-type(1){width: 69.5%;}
-.contenidoBodas>img:nth-of-type(2){width: 29.5%;}
+.contenidoBodas>img:nth-of-type(1){width: 68.4%;}
+.contenidoBodas>img:nth-of-type(2){width: 30.6%;}
 .contenidoBodas>img:nth-of-type(4){width: 49.5%;}
 .contenidoBodas>img:nth-of-type(5){width: 49.5%;}
 .contenidoBodas>p{font-size: 120%;letter-spacing: 0.1ex;}
