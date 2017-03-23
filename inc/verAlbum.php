@@ -17,7 +17,15 @@ $idAlbum=$_REQUEST['id'];
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.11/jquery.mousewheel.min.js"></script>
   </head>
   <body>
-    <div class="cuerpo2">
+    <header>
+      <div class="menu">
+        <ul id="menu">
+          <li><a href="./blog.php">Volver</a></li>
+          <li><img class='logo' src="../img/logo2.png" alt="logo"></li>
+        </ul>
+      </div>
+    </header>
+    <div class="cuerpo2 cuerpoalbum">
       <section id="photostack-1" class="photostack photostack-start">
         <div class="carousel">
           <div class="slides">
@@ -42,17 +50,18 @@ $idAlbum=$_REQUEST['id'];
     </div>
     <script type="text/javascript">
     $(document).ready(function(){
+      $(".buttonNav").css("margin-top",$())
       $('.carousel').carousel({
-        carouselWidth:930,
-        carouselHeight:330,
+        carouselWidth:720,
+        carouselHeight:480,
         directionNav:true,
         shadow:false,
         buttonNav:'bullets',
-        speed: 1500,
+        speed: 500,
         autoplayInterval: 5000,
         reflection:true,
-        frontWidth: 800,
-        frontHeight:600,
+        frontWidth: 720,
+        frontHeight:480,
         /*hAlign: 'center',
         vAlign: 'center',
         hMargin: 0.4,

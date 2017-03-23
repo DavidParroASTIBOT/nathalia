@@ -29,23 +29,18 @@
   		</div>
       <div class="flexslider">
         <ul class="slides">
-          <li data-thumb="../img/bautizos/Album1/16712744833_4d21865ed8_o-min.jpg">
-            <img src="../img/bautizos/Album1/16712744833_4d21865ed8_o-min.jpg" />
+          <li data-thumb="../img/bebes/Album/_MG_3404-min.jpg">
+            <img src="../img/bebes/Album/_MG_3404-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17081588350_41cb0de454_o-min.jpg">
-            <img src="../img/bautizos/Album1/17081588350_41cb0de454_o-min.jpg" />
+          <li data-thumb="../img/bebes/Album/_MG_3432-Recuperado-min.jpg">
+            <img src="../img/bebes/Album/_MG_3432-Recuperado-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17243178166_67d032b1a6_o-min.jpg">
-            <img src="../img/bautizos/Album1/17243178166_67d032b1a6_o-min.jpg" />
+          <li data-thumb="../img/bebes/Album/_MG_3437-min.jpg">
+            <img src="../img/bebes/Album/_MG_3437-min.jpg" />
           </li>
-          <li data-thumb="../img/bautizos/Album1/17267373382_a91acc9b8c_o-min.jpg">
-            <img src="../img/bautizos/Album1/17267373382_a91acc9b8c_o-min.jpg" />
+          <li data-thumb="../img/bebes/Album/_MG_3448-Recuperado-min.jpg">
+            <img src="../img/bebes/Album/_MG_3448-Recuperado-min.jpg" />
           </li>
-<!--
-          <li data-thumb="../img/bautizos/Album1/17307028356_b18975571c_o.jpg">
-            <img src="../img/bautizos/Album1/17307028356_b18975571c_o.jpg" />
-          </li>
--->
         </ul>
       </div>
     </header>

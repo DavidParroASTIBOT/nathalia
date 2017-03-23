@@ -12,6 +12,7 @@
         $form=false;
       }else{
         $form=true;
+        crearNombreIdSesion();
       }
     }else{
       if(isset($_POST['enviar'])){
@@ -22,12 +23,14 @@
           $form=false;
         }else{
           $form=true;
+          crearNombreIdSesion();
         }
       }else{
         $form=true;
+        crearNombreIdSesion();
       }
     }
-    crearNombreIdSesion();
+
 
 ?>
 <!DOCTYPE html>
@@ -70,7 +73,8 @@
           <p>Ante todo, gracias por confiar en nosotros y contratar nuestros servicios.A continuación, podrá ver todas las fotos de su reportaje:</p>
             <?php
               $albumes=mostrarAlbumes($_SESSION['id']);
-              $ubicacion=$albumes[0][5];
+              $ubicacion=ubicacionAlbum($albumes[0][0]);
+              $ubicacion=$ubicacion['ubicacion'];
               $idAlbum=$albumes[0][0];
               $fotos=mostrarFotos($idAlbum);
               echo "<div id='freewall' class='portada'>";
@@ -86,7 +90,7 @@
               echo "</div>";
             ?>
           <?php  } else { ?>
-            <h1>Aun no tienes álbumes</h1>
+            <h1>Aun no tienes fotos</h1>
           <?php }  ?>
       <?php } ?>
     </div>

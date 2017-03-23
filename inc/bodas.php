@@ -11,7 +11,7 @@
     <script src="../flexslider/jquery.flexslider-min.js"></script>
     <script src="../js/flexslider.js"></script>
     <script src="https://use.fontawesome.com/01dd6c6b33.js"></script>
-		<title>Bebes y Bautizos</title>
+		<title>Bodas, preboda y postboda</title>
 		<style type="text/css" media="screen">
 			.imagen img,.imagen,.imagen a{
 				min-height: 500px!important;
@@ -42,18 +42,26 @@
 			</header>
 			<div class="cuerpo">
 			<h1>BODAS</h1>
-			<p>Hacemos fotografía de parejas, preboda, boda y postboda.
-				Además nosotros nos  reunimos con vosotros y os preguntamos qué cosas os gustan y cuales odiáis, de
-				forma que el día de la boda todo vaya fluido.
-				Nuestro estilo es el de fotorreportaje (La fotógrafa no es la protagonista ni crea la acción sino
-				que la cuenta), evitamos que os perdáis el coctail haciendo posados (aprovechamos cualquier
-				sitio despejado donde hagáis el coctail y nos escapamos 5 minutos para hacer unas fotos para
-				que vuestras madres la pueda poner en un marco), perseguimos la naturalidad y la máxima
-				belleza en las tomas y sobretodo en los protagonistas,  queremos que salgáis guapos,
-				contentos y espontáneos, que vustra ropa luzca y por encima de todo buscamos las emociones
-				de un dia tan especial.
-				Consulte nuestras tarifas de reportajes de parejas, Pre boda, boda y post boda.
-			</p>
+				<div class="contenidoBodas">
+					<p>Hacemos fotografía de parejas, preboda, boda y postboda.
+						Además nosotros nos  reunimos con vosotros y os preguntamos qué cosas os gustan y cuales odiáis, de
+						forma que el día de la boda todo vaya fluido.</p>
+					<img src="../img/bodas/album/_MG_1585-2-min.jpg" alt="">
+					<img src="../img/bodas/album/_MG_1792-2-min.jpg" alt="">
+
+						<p>Nuestro estilo es el de fotorreportaje (La fotógrafa no es la protagonista ni crea la acción sino
+						que la cuenta), evitamos que os perdáis el coctail haciendo posados (aprovechamos cualquier
+						sitio despejado donde hagáis el coctail y nos escapamos 5 minutos para hacer unas fotos para
+						que vuestras madres la pueda poner en un marco). </p>
+					<img src="../img/bodas/album/_MG_1631-min.jpg" alt="">
+					<img src="../img/bodas/album/_MG_1864-min.jpg" alt="">
+					<img src="../img/bodas/album/_MG_1767-min.jpg" alt="">
+					<p>Perseguimos la naturalidad y la máxima
+					belleza en las tomas y sobretodo en los protagonistas,  queremos que salgáis guapos,
+					contentos y espontáneos, que vuestra ropa luzca y por encima de todo buscamos las emociones
+					de un dia tan especial. Consulte nuestras tarifas de reportajes de parejas, Pre boda, boda y post boda.
+				</p>
+				</div>
 			</div>
 				<a href='#subir2' class='subir2'><img src="img/flecha.png" alt=""></a>
 			</div><!--FIN-->

@@ -401,7 +401,7 @@ i{margin-right: 1ex;}
 }
 @media (min-width:1320px) and (max-width:1350px){
   #slider>img{
-    width: 65%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 135px;
@@ -422,7 +422,7 @@ i{margin-right: 1ex;}
 }
 @media (min-width:1351px) and (max-width:1479px){
   #slider>img{
-    width: 65%;
+    width: 55%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 115px;
@@ -474,3 +474,17 @@ i{margin-right: 1ex;}
 .portada{width: 60%;margin: auto;display: flex;flex-flow: row wrap;}
 .portada>.material-placeholder{align-self: center}
 .seleccionada{box-shadow: 0 0 10px #F781F3!important;}
+div.cuerpoalbum{margin-top: 110px;}
+.contenidoBodas,.contenidoPremama{display: flex;flex-flow: row wrap;justify-content: space-between;}
+.contenidoBodas>img{margin: 0.5ex 0;}
+.contenidoBodas>img:nth-of-type(1){width: 69.5%;}
+.contenidoBodas>img:nth-of-type(2){width: 29.5%;}
+.contenidoBodas>img:nth-of-type(4){width: 49.5%;}
+.contenidoBodas>img:nth-of-type(5){width: 49.5%;}
+.contenidoBodas>p{font-size: 120%;letter-spacing: 0.1ex;}
+.contenidoPremama>img:nth-of-type(1),.contenidoPremama>img:nth-of-type(2),.contenidoPremama>img:nth-of-type(3){
+  width: 33%;
+}
+.contenidoPremama>img:nth-of-type(4),.contenidoPremama>img:nth-of-type(5){
+  width: 49.5%;
+}

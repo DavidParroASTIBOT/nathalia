@@ -2,6 +2,7 @@ $(document).ready(function(){
   $("#addUser").click(function(){
     var nombre=$("#user").val();
     var pass=$("#pass").val();
+    pass=md5(pass);
     $.post("./inc/addUser.php","nombre="+nombre+"&pass="+pass,function(consulta){
       if(consulta==1){
         alert("Nombre: "+nombre+" Pass: "+pass+" Usuario agregado.");

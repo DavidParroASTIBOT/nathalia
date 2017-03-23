@@ -18,7 +18,7 @@
         <ul id="menu">
           <li><a href="#slider">INICIO</a></li>
           <li><a href="#secciones">SECCIONES</a></li>
-          <li><a href="./inc/blog.php">BLOG</a></li>
+          <li><a href="./inc/blog.php">ÁLBUMES</a></li>
           <li><img class='logo' src="./img/logo2.png" alt="logo"></li>
           <li><a href="#anclaSobremi">SOBRE MI</a></li>
           <li><a href="#contacto">CONTACTO</a></li>
@@ -30,7 +30,7 @@
       <ul id="mmobile">
         <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i>INICIO</a></li>
         <li><a href="#secciones"><i class="fa fa-th" aria-hidden="true"></i>SECCIONES</a></li>
-        <li><a href="#blog"><i class="fa fa-picture-o" aria-hidden="true"></i>BLOG</a></li>
+        <li><a href="#blog"><i class="fa fa-picture-o" aria-hidden="true"></i>ÁLBUMES</a></li>
         <li><a href="#sobremi"><i class="fa fa-user-circle-o" aria-hidden="true"></i>SOBRE MI</a></li>
         <li><a href="#gmap"><i class="fa fa-map-marker" aria-hidden="true"></i>UBICACIÓN</a></li>
         <li><a href="#contacto"><i class="fa fa-phone" aria-hidden="true"></i>CONTACTO</a></li>
@@ -80,10 +80,10 @@
           </a>
         </div>
         <div class="imgSec">
-          <img class='imgPort' alt='bebe' src='./img/bautizos/portada-seccion.jpg'>
+          <img class='imgPort' alt='bebe' src='./img/bebes/portada-seccion.jpg'>
           <img class='imgPort' alt='comunion' src='./img/comuniones/portada-seccion.jpg'>
           <img class='imgPort' alt='boda' src='./img/bodas/portada-seccion-min.jpg'>
-          <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
+          <img class='imgPort' alt='mas' src='./img/premama/portada-seccion.jpg'>
           <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
           <img class='imgPort' alt='mas' src='./img/mas/portada-seccion.jpg'>
         </div>

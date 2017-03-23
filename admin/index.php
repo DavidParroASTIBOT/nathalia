@@ -129,6 +129,7 @@
     <footer>
       <p><img class='cr' src='../img/cr.png'>Nathalia Dias Campos - Todos los derechos reservados - <a href='../inc/cookies.html'>Política de cookies</a> - <a href='../inc/avisoLegal.html'>Aviso Legal</a></p>
     </footer>
+    <script src="./js/md5.js"></script>
   </body>
   <script type="text/javascript" src="./js/materialize.min.js"></script>
   <script type="text/javascript">

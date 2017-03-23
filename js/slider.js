@@ -3,7 +3,7 @@ $(document).ready(function(){
     c=1;
     $('#slider').append("<img src='./img/slider/slider"+c+".jpg' alt='fondo' />");
     function fondo(){
-      n=3;
+      n=6;
       if(c==n){
         c=1;
       }else{
