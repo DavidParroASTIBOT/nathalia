@@ -5,7 +5,7 @@
     iniciarSesion();
     if(isset($_SESSION['id'])){
       $form=false;
-      if(comprobarUsuario($_SESSION['pass'])){
+      if(comprobarUsuario(md5($_SESSION['pass']))){
         if($_SESSION['tipo']==1){
           header("Location: ../admin/index.php");
         }
@@ -16,7 +16,7 @@
       }
     }else{
       if(isset($_POST['enviar'])){
-        if(comprobarUsuario($_POST['pass'])){
+        if(comprobarUsuario(md5($_POST['pass']))){
           if($_SESSION['tipo']==1){
             header("Location: ../admin/index.php");
           }

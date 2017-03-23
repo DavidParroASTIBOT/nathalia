@@ -17,6 +17,7 @@ $(document).ready(function(){
   $("#delUser").click(function(){
     var nombre=$("#user").val();
     var pass=$("#pass").val();
+    pass=md5(pass);
     $.post("./inc/delUser.php","nombre="+nombre+"&pass="+pass,function(consulta){
       if(consulta==1){
         alert("Usuario "+nombre+" borrado correctamente.");
