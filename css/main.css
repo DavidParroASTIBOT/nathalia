@@ -476,12 +476,13 @@ i{margin-right: 1ex;}
 .seleccionada{box-shadow: 0 0 10px #F781F3!important;}
 div.cuerpoalbum{margin-top: 110px;}
 .contenidoBodas,.contenidoPremama{display: flex;flex-flow: row wrap;justify-content: space-between;}
-.contenidoBodas>img{margin: 0.5ex 0;}
+.contenidoBodas>img{margin: 0.5ex 0;height: 100%;width: 100%;}
 .contenidoBodas>img:nth-of-type(1){width: 69.5%;}
 .contenidoBodas>img:nth-of-type(2){width: 29.5%;}
 .contenidoBodas>img:nth-of-type(4){width: 49.5%;}
 .contenidoBodas>img:nth-of-type(5){width: 49.5%;}
 .contenidoBodas>p{font-size: 120%;letter-spacing: 0.1ex;}
+.contenidoPremama>img{width: 100%;height: 100%;}
 .contenidoPremama>img:nth-of-type(1),.contenidoPremama>img:nth-of-type(2),.contenidoPremama>img:nth-of-type(3){
   width: 33%;
 }
